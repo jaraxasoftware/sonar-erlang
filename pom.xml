@@ -32,20 +32,8 @@
 
     <developers>
         <developer>
-            <id>tamas.kende</id>
-            <name>Kende Tamas</name>
-        </developer>
-        <developer>
-            <id>hegedenes</id>
-            <name>Denes Hegedus</name>
-        </developer>
-        <developer>
-            <id>arthesy</id>
-            <name>Andris Raugulis</name>
-        </developer>
-        <developer>
-            <id>danirukun</id>
-            <name>Daniils Petrovs</name>
+            <id>sjg-jrx</id>
+            <name>Sergio Jurado</name>
         </developer>
     </developers>
 
@@ -57,14 +45,14 @@
     </modules>
 
     <scm>
-        <connection>scm:git:git@github.com:evolution-gaming/sonar-erlang.git</connection>
-        <developerConnection>scm:git:git@github.com:evolution-gaming/sonar-erlang.git</developerConnection>
-        <url>https://github.com/evolution-gaming/sonar-erlang</url>
+        <connection>scm:git:git@github.com:jaraxasoftware/sonar-erlang.git</connection>
+        <developerConnection>scm:git:git@github.com:jaraxasoftware/sonar-erlang.git</developerConnection>
+        <url>https://github.com/jaraxasoftware/sonar-erlang</url>
         <tag>HEAD</tag>
     </scm>
     <issueManagement>
         <system>GitHub Issues</system>
-        <url>https://github.com/evolution-gaming/sonar-erlang/issues</url>
+        <url>https://github.com/jaraxasoftware/sonar-erlang/issues</url>
     </issueManagement>
 
     <properties>
