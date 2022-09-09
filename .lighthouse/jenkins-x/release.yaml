@@ -21,7 +21,7 @@ spec:
               -Xms10m -Xmx192m
           - name: MAVEN_OPTS
             value: -Dhttp.keepAlive=false -Dmaven.wagon.http.pool=false -Dmaven.wagon.httpconnectionManager.ttlSeconds=25 -Dmaven.wagon.http.retryHandler.count=3
-          image: uses:jenkins-x/jx3-pipeline-catalog/tasks/maven/release.yaml@versionStream
+          image: uses:jenkins-x/jx3-pipeline-catalog/tasks/maven-java11/release.yaml@versionStream
           name: ""
           resources:
             # override limits for all containers here
@@ -47,8 +47,12 @@ spec:
         - name: build-mvn-deploy
           resources: {}
           script: |
-            #!/usr/bin/env sh
-            source .jx/variables.sh
+            #!/usr/bin/env bash
+            # modify the pom.xml
+            echo "upgrading the pom to version $VERSION"
+            mvn versions:set -DnewVersion=$VERSION
+            mvn --no-transfer-progress clean deploy
+            # trigger sonar analysis
             mvn clean -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar            
         - name: promote-changelog
           resources: {}
