@@ -9,7 +9,7 @@
         <version>54</version>
     </parent>
 
-    <groupId>com.jaraxasoftware.sonarqube.erlang</groupId>
+    <groupId>com.evolution.sonarqube.erlang</groupId>
     <artifactId>erlang</artifactId>
     <version>1.5-SNAPSHOT</version>
     <packaging>pom</packaging>
@@ -19,8 +19,8 @@
     <url/>
     <inceptionYear>2012</inceptionYear>
     <organization>
-        <name>jaraxasoftware</name>
-        <url>https://www.jaraxa.com</url>
+        <name>Evolution</name>
+        <url>https://www.evolution.com</url>
     </organization>
     <licenses>
         <license>
@@ -32,8 +32,20 @@
 
     <developers>
         <developer>
-            <id>jrx-sjg</id>
-            <name>Sergio Jurado</name>
+            <id>tamas.kende</id>
+            <name>Kende Tamas</name>
+        </developer>
+        <developer>
+            <id>hegedenes</id>
+            <name>Denes Hegedus</name>
+        </developer>
+        <developer>
+            <id>arthesy</id>
+            <name>Andris Raugulis</name>
+        </developer>
+        <developer>
+            <id>danirukun</id>
+            <name>Daniils Petrovs</name>
         </developer>
     </developers>
 
@@ -45,14 +57,14 @@
     </modules>
 
     <scm>
-        <connection>scm:git:git@github.com:jaraxasoftware/sonar-erlang.git</connection>
-        <developerConnection>scm:git:git@github.com:jaraxasoftware/sonar-erlang.git</developerConnection>
-        <url>https://github.com/jaraxasoftware/sonar-erlang</url>
+        <connection>scm:git:git@github.com:evolution-gaming/sonar-erlang.git</connection>
+        <developerConnection>scm:git:git@github.com:evolution-gaming/sonar-erlang.git</developerConnection>
+        <url>https://github.com/evolution-gaming/sonar-erlang</url>
         <tag>HEAD</tag>
     </scm>
     <issueManagement>
         <system>GitHub Issues</system>
-        <url>https://github.com/jaraxasoftware/sonar-erlang/issues</url>
+        <url>https://github.com/evolution-gaming/sonar-erlang/issues</url>
     </issueManagement>
 
     <properties>
@@ -60,10 +72,10 @@
         <sonar.version>9.6.1.59531</sonar.version>
         <sslr.version>1.24.0.633</sslr.version>
         <maven.test.redirectTestOutputToFile>true</maven.test.redirectTestOutputToFile>
-        <sonar.projectKey>jaraxasoftware_sonar-erlang</sonar.projectKey>
+        <sonar.projectKey>evolution-gaming_sonar-erlang</sonar.projectKey>
         <sonar.moduleKey>${project.groupId}:${project.artifactId}</sonar.moduleKey>
-        <sonar.organization>jaraxasoftware</sonar.organization>
-        <sonar.host.url>https://sonarqube-jx3.develop.jaraxa.systems</sonar.host.url>
+        <sonar.organization>evolution-gaming</sonar.organization>
+        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
 	<sonar.coverage.jacoco.xmlReportPaths>${_rootdir}/sonar-erlang-plugin/target/site/jacoco-aggregate/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
     </properties>
 
