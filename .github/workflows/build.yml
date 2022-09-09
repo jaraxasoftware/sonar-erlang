@@ -34,6 +34,6 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: mvn clean -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar
       - name: Publish package
-        run: mvn -B deploy:deploy release:perform
+        run: mvn release:prepare -P scm-release -DskipTests -DdryRun=false -Darguments="-DskipTests -DdeveloperConnectionUrl=scm:git:${git.repo.url}"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}        
