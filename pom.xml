@@ -72,10 +72,10 @@
         <sonar.version>9.4.0.54424</sonar.version>
         <sslr.version>1.24.0.633</sslr.version>
         <maven.test.redirectTestOutputToFile>true</maven.test.redirectTestOutputToFile>
-        <sonar.projectKey>evolution-gaming_sonar-erlang</sonar.projectKey>
+        <sonar.projectKey>jaraxasoftware_netcomp_AYMhPTCT5jRUklHD7VIM</sonar.projectKey>
         <sonar.moduleKey>${project.groupId}:${project.artifactId}</sonar.moduleKey>
-        <sonar.organization>evolution-gaming</sonar.organization>
-        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+        <sonar.organization>jaraxasoftware</sonar.organization>
+        <sonar.host.url>https://sonarqube-jx3.develop.jaraxa.systems</sonar.host.url>
 	<sonar.coverage.jacoco.xmlReportPaths>${_rootdir}/sonar-erlang-plugin/target/site/jacoco-aggregate/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
     </properties>
 
