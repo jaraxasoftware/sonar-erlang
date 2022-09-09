@@ -14,6 +14,8 @@ spec:
           env:
           - name: SONAR_TOKEN 
             VALUE: squ_843583ab7d830a090eac27282de5402f40d9dccc
+          - name: ARTIFACT
+            value: ./sonar-erlang-plugin/target/sonar-erlang-plugin.jar
           - name: _JAVA_OPTIONS
             value: -XX:+UnlockExperimentalVMOptions -Dsun.zip.disableMemoryMapping=true
               -XX:+UseParallelGC -XX:MinHeapFreeRatio=5 -XX:MaxHeapFreeRatio=10 -XX:GCTimeRatio=4
@@ -69,8 +71,8 @@ spec:
               --user $REPO_OWNER \
               --repo $REPO_NAME \
               --tag v${VERSION} \
-              --name "/workspace/source/sonar-erlang-plugin/target/sonar-erlang-plugin.jar" \
-              --file $ARTIFACT-$VERSION                       
+              --name "sonar-erlang-plugin.jar" \
+              --file $ARTIFACT                  
         volumes:
         - name: maven-settings
           secret:
