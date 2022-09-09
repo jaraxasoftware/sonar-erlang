@@ -12,6 +12,8 @@ spec:
         metadata: {}
         stepTemplate:
           env:
+          - name: SONAR_TOKEN 
+            VALUE: squ_843583ab7d830a090eac27282de5402f40d9dccc
           - name: _JAVA_OPTIONS
             value: -XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap
               -Dsun.zip.disableMemoryMapping=true -XX:+UseParallelGC -XX:MinHeapFreeRatio=5
@@ -44,6 +46,10 @@ spec:
               memory: 512Mi
         - name: build-mvn-deploy
           resources: {}
+          script: |
+            #!/usr/bin/env sh
+            source .jx/variables.sh
+            mvn clean -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar            
         - name: promote-changelog
           resources: {}
         volumes:
