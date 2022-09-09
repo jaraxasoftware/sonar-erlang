@@ -13,13 +13,13 @@
     <version>1.7-SNAPSHOT</version>
     <packaging>pom</packaging>
 
-    <name>Erlang</name>
+    <name>sonar-erlang</name>
     <description>Parent pom of SonarQube erlang plugin</description>
     <url />
     <inceptionYear>2012</inceptionYear>
     <organization>
-        <name>Evolution</name>
-        <url>https://www.evolution.com</url>
+        <name>Jaraxa</name>
+        <url>https://www.jaraxa.com</url>
     </organization>
     <licenses>
         <license>
