@@ -50,6 +50,15 @@
         <url>https://github.com/jaraxasoftware/sonar-erlang</url>
         <tag>HEAD</tag>
     </scm>
+    
+    <distributionManagement>
+    <repository>
+        <id>github</id>
+        <name>GitHub</name>
+        <url>https://maven.pkg.github.com/jaraxasoftware/sonar-erlang</url>  
+    </repository>
+    </distributionManagement>
+
     <issueManagement>
         <system>GitHub Issues</system>
         <url>https://github.com/jaraxasoftware/sonar-erlang/issues</url>
