@@ -69,7 +69,7 @@
         <sonar.version>9.4.0.54424</sonar.version>
         <sslr.version>1.24.0.633</sslr.version>
         <maven.test.redirectTestOutputToFile>true</maven.test.redirectTestOutputToFile>
-        <sonar.projectKey>jaraxasoftware_netcomp_AYMhPTCT5jRUklHD7VIM</sonar.projectKey>
+        <sonar.projectKey>jaraxasoftware_sonar-erlang_AYMiJbbWdcZMWxhipgRM</sonar.projectKey>
         <sonar.moduleKey>${project.groupId}:${project.artifactId}</sonar.moduleKey>
         <sonar.organization>jaraxasoftware</sonar.organization>
         <sonar.host.url>https://sonarqube-jx3.develop.jaraxa.systems</sonar.host.url>
