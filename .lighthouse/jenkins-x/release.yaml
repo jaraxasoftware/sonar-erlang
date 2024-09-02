@@ -58,21 +58,21 @@ spec:
             mvn clean -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar            
         - name: promote-changelog
           resources: {}
-        - image: uses:jaraxasoftware/jaraxa-pipeline-catalog/tasks/erlang-rebar/release.yaml@versionStream
+        - image: golang:1.22
           name: upload-artifacts-release
           resources: {}
           script: |
             #!/usr/bin/env bash
             source .jx/variables.sh
-            set +x            
-            
+            set +x
+
             go get github.com/github-release/github-release
             github-release upload \
               --user $REPO_OWNER \
               --repo $REPO_NAME \
               --tag v${VERSION} \
               --name "sonar-erlang-plugin.jar" \
-              --file $ARTIFACT                  
+              --file $ARTIFACT
         volumes:
         - name: maven-settings
           secret:
