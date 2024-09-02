@@ -55,7 +55,7 @@ spec:
             mvn versions:set -DnewVersion=$VERSION
             mvn --no-transfer-progress clean deploy
             # trigger sonar analysis
-            mvn clean -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar            
+            mvn -q -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar            
         - name: promote-changelog
           resources: {}
         - image: golang:1.22
@@ -66,7 +66,7 @@ spec:
             source .jx/variables.sh
             set +x
 
-            go get github.com/github-release/github-release
+            go install github.com/github-release/github-release
             github-release upload \
               --user $REPO_OWNER \
               --repo $REPO_NAME \
